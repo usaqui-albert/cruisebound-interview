@@ -21,9 +21,9 @@ export function SailingCard({ sailing }: { sailing: Sailing }) {
   }, [sailing.itinerary]);
 
   return (
-    <article className="flex shadow-lg rounded-2xl overflow-hidden w-full">
+    <article className="flex flex-col md:flex-row shadow-lg rounded-2xl overflow-hidden w-full">
       {/*Sailing picture*/}
-      <div className="relative w-72">
+      <div className="relative w-full md:w-72 h-72 md:h-auto">
         <div className="w-fit m-4 px-2.5 py-1 bg-black/75 rounded">
           <p className="text-white font-medium">
             {departureAndReturnDatesString}
@@ -41,7 +41,7 @@ export function SailingCard({ sailing }: { sailing: Sailing }) {
       <div className="flex flex-col flex-1">
         {/*Top sailing content info*/}
         <div className="flex flex-col p-6">
-          <div className="flex justify-between">
+          <div className="flex flex-col sm:flex-row sm:justify-between">
             <div>
               <header>
                 <h3 className="text-2xl font-semibold">{sailing.name}</h3>
@@ -59,15 +59,15 @@ export function SailingCard({ sailing }: { sailing: Sailing }) {
               </div>
             </div>
 
-            <div>
+            {/*Ship line logo and name*/}
+            <div className="flex flex-col sm:items-end my-4 sm:my-0">
               <Image
-                className="float-end"
                 src={sailing.ship.line.logo}
                 width={100}
                 height={50}
                 alt={sailing.ship.name}
               />
-              <div className="text-right">
+              <div className="sm:text-right">
                 <Small>{sailing.ship.name}</Small>
               </div>
             </div>
