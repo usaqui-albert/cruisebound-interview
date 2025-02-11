@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        blue: {
+          DEFAULT: "#161a2c",
+        },
       },
       boxShadow: {
         lg: "2px 2px 8px rgba(0, 0, 0, 0.10)",

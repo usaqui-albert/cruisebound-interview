@@ -40,7 +40,7 @@ export function SailingCard({ sailing }: { sailing: Sailing }) {
       {/*Sailing content info*/}
       <div className="flex flex-col flex-1">
         {/*Top sailing content info*/}
-        <div className="flex flex-col p-6">
+        <div className="flex flex-col p-4">
           <div className="flex flex-col sm:flex-row sm:justify-between">
             <div>
               <header>
@@ -73,7 +73,7 @@ export function SailingCard({ sailing }: { sailing: Sailing }) {
             </div>
           </div>
 
-          <div className="flex gap-2.5 mt-4 items-center flex-wrap">
+          <div className="flex gap-2.5 mt-4 items-center flex-wrap max-h-16 bg-background overflow-hidden">
             {itineraryToRender}
           </div>
         </div>
