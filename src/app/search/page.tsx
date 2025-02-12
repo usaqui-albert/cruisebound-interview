@@ -10,7 +10,7 @@ interface SearchParams {
 }
 
 export default async function SearchPage(props: {
-  searchParams: SearchParams;
+  searchParams: Promise<SearchParams>;
 }) {
   const searchParams = await props.searchParams;
   const port = searchParams?.port || "";
